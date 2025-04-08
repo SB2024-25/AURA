@@ -650,6 +650,11 @@ def generate_heatmap(df, filename):
 def index():
     return render_template('index.html', datasets=os.listdir(UPLOAD_FOLDER))
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+
 @app.route('/register')
 def register():
     return render_template('register.html')
