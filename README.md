@@ -2,7 +2,7 @@
 
 A Data Science course project that brings your datasets to life with interactive visualizations and intelligent insights. This web-based dashboard allows users to upload datasets, explore dynamic Plotly-powered visualizations, and read AI-generated conclusions — all in a clean, modern interface inspired by Power BI and ChartHub.
 
-
+Reminder to Install MISTRAL AI version 0.42 for this  Project.
 
  🚀 Features
 
