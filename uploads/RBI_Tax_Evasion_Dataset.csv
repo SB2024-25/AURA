@@ -1,0 +1,311 @@
+Entity_Type,Tax_Evasion_Amount_INR,Source_of_Income,Red_Flags,Investigation_Status,Penalty_Imposed,Previous_Offenses
+Individual,56738830,Business,Shell Companies,Convicted,None,4
+Company,43419428,Investments,Large Cash Transactions,Convicted,Assets Seized,1
+Individual,14700271,Others,Offshore Accounts,Closed,None,1
+Individual,31775526,Real Estate,High-value Property Deals,Pending,Fine Imposed,4
+Individual,79398896,Real Estate,Offshore Accounts,Convicted,Jail Sentence,0
+Company,19042383,Business,Shell Companies,Closed,Jail Sentence,4
+Individual,71045266,Investments,Multiple Fake Accounts,Pending,Fine Imposed,4
+Individual,56927183,Investments,Offshore Accounts,Ongoing,Fine Imposed,1
+Individual,84624185,Investments,Offshore Accounts,Closed,Jail Sentence,1
+Company,2039173,Consultancy,High-value Property Deals,Closed,None,4
+Individual,36685193,Salary,High-value Property Deals,Pending,None,4
+Individual,32524983,Consultancy,Large Cash Transactions,Ongoing,Fine Imposed,4
+Individual,34049533,Salary,High-value Property Deals,Closed,None,1
+Individual,14766695,Investments,Unreported Income,Convicted,Jail Sentence,4
+Company,92042689,Investments,Shell Companies,Convicted,None,4
+Individual,91349103,Consultancy,Shell Companies,Convicted,Fine Imposed,3
+Company,64017150,Consultancy,Multiple Fake Accounts,Ongoing,Jail Sentence,0
+Company,91549349,Salary,Multiple Fake Accounts,Closed,None,2
+Company,64031206,Real Estate,Shell Companies,Convicted,Assets Seized,0
+Individual,64835345,Salary,Multiple Fake Accounts,Ongoing,Jail Sentence,3
+Company,17932750,Consultancy,Large Cash Transactions,Convicted,Jail Sentence,2
+Individual,78775274,Others,High-value Property Deals,Pending,Assets Seized,4
+Company,60353849,Consultancy,Shell Companies,Closed,Assets Seized,3
+Company,10242257,Others,Multiple Fake Accounts,Closed,Jail Sentence,4
+Company,43217705,Business,Shell Companies,Ongoing,Assets Seized,1
+Company,94619232,Consultancy,Unreported Income,Ongoing,Fine Imposed,3
+Company,21180343,Business,Offshore Accounts,Closed,Fine Imposed,1
+Company,40919792,Real Estate,High-value Property Deals,Convicted,Fine Imposed,3
+Company,49963224,Salary,Shell Companies,Convicted,Jail Sentence,3
+Company,64406138,Others,Offshore Accounts,Pending,Assets Seized,1
+Individual,92009541,Salary,Multiple Fake Accounts,Convicted,Assets Seized,2
+Individual,67657727,Business,Offshore Accounts,Ongoing,None,0
+Company,92692342,Others,High-value Property Deals,Ongoing,None,4
+Company,53057836,Salary,Shell Companies,Convicted,Assets Seized,3
+Company,65591801,Consultancy,Unreported Income,Ongoing,Assets Seized,4
+Individual,58164585,Investments,Multiple Fake Accounts,Closed,Assets Seized,1
+Company,26708609,Business,Shell Companies,Closed,Jail Sentence,4
+Individual,76344551,Salary,High-value Property Deals,Convicted,Assets Seized,1
+Individual,30074204,Business,Multiple Fake Accounts,Closed,None,4
+Individual,82058891,Business,Large Cash Transactions,Closed,Jail Sentence,0
+Individual,48765257,Others,Offshore Accounts,Pending,Assets Seized,0
+Individual,22318806,Others,High-value Property Deals,Pending,None,0
+Company,6562440,Investments,Large Cash Transactions,Closed,Jail Sentence,0
+Company,12481395,Consultancy,Shell Companies,Convicted,Assets Seized,0
+Company,73258492,Business,Unreported Income,Pending,Assets Seized,0
+Company,29143907,Salary,Multiple Fake Accounts,Ongoing,Assets Seized,1
+Company,36303447,Real Estate,Offshore Accounts,Ongoing,Jail Sentence,3
+Individual,62184783,Business,Multiple Fake Accounts,Ongoing,None,4
+Company,93610813,Business,Shell Companies,Convicted,None,0
+Company,62510303,Investments,Multiple Fake Accounts,Closed,Fine Imposed,1
+Individual,83881437,Consultancy,Offshore Accounts,Ongoing,Assets Seized,1
+Company,64497435,Real Estate,Shell Companies,Convicted,Fine Imposed,1
+Individual,49945282,Others,Multiple Fake Accounts,Pending,Fine Imposed,3
+Company,2553771,Others,Unreported Income,Closed,None,4
+Individual,70336689,Salary,High-value Property Deals,Pending,Jail Sentence,3
+Company,1046161,Real Estate,Shell Companies,Convicted,Jail Sentence,2
+Company,4233839,Others,High-value Property Deals,Ongoing,None,1
+Individual,67825190,Salary,Shell Companies,Ongoing,Jail Sentence,2
+Individual,67808014,Consultancy,Unreported Income,Convicted,Fine Imposed,0
+Individual,20203173,Salary,High-value Property Deals,Ongoing,Assets Seized,0
+Individual,67277698,Others,Large Cash Transactions,Closed,None,3
+Individual,48989582,Investments,Offshore Accounts,Convicted,Assets Seized,4
+Individual,56274957,Investments,Large Cash Transactions,Pending,Jail Sentence,2
+Individual,22775756,Investments,Multiple Fake Accounts,Convicted,Assets Seized,4
+Individual,71581065,Others,Unreported Income,Closed,Jail Sentence,3
+Company,1129600,Investments,Large Cash Transactions,Closed,Jail Sentence,0
+Company,26241539,Real Estate,Shell Companies,Convicted,Fine Imposed,4
+Individual,32626169,Consultancy,Multiple Fake Accounts,Convicted,Jail Sentence,4
+Company,43431573,Salary,Multiple Fake Accounts,Ongoing,Fine Imposed,0
+Company,94605918,Salary,Large Cash Transactions,Closed,Fine Imposed,2
+Company,70662021,Others,Large Cash Transactions,Convicted,Fine Imposed,0
+Company,25100090,Investments,Unreported Income,Convicted,None,4
+Individual,8899851,Investments,Offshore Accounts,Closed,None,2
+Company,60829108,Business,Large Cash Transactions,Convicted,Jail Sentence,2
+Individual,95584048,Consultancy,Large Cash Transactions,Ongoing,Fine Imposed,0
+Company,66059351,Real Estate,High-value Property Deals,Closed,None,4
+Company,85921668,Salary,Shell Companies,Ongoing,Fine Imposed,3
+Company,92576139,Business,High-value Property Deals,Ongoing,Assets Seized,4
+Individual,84940726,Business,High-value Property Deals,Ongoing,Assets Seized,1
+Company,98179091,Others,Multiple Fake Accounts,Ongoing,Assets Seized,3
+Individual,87803580,Salary,Offshore Accounts,Closed,Jail Sentence,2
+Company,29599535,Others,Shell Companies,Ongoing,Fine Imposed,3
+Individual,499395,Real Estate,Unreported Income,Ongoing,Assets Seized,2
+Company,21971117,Business,Unreported Income,Convicted,None,2
+Individual,40358782,Business,Large Cash Transactions,Closed,Assets Seized,3
+Individual,51642034,Consultancy,Large Cash Transactions,Closed,Assets Seized,2
+Company,53436038,Real Estate,Unreported Income,Pending,Assets Seized,2
+Individual,57401079,Business,Large Cash Transactions,Closed,Jail Sentence,1
+Company,31580803,Real Estate,Offshore Accounts,Closed,None,4
+Company,33316319,Salary,High-value Property Deals,Pending,Fine Imposed,4
+Company,30553180,Investments,Large Cash Transactions,Closed,None,1
+Company,3429569,Business,Multiple Fake Accounts,Closed,Fine Imposed,3
+Company,70059467,Consultancy,Large Cash Transactions,Closed,Jail Sentence,0
+Company,44960237,Salary,Shell Companies,Closed,Jail Sentence,0
+Company,42215906,Real Estate,Offshore Accounts,Pending,Jail Sentence,0
+Company,59905504,Others,Shell Companies,Closed,Jail Sentence,1
+Company,89523854,Salary,Shell Companies,Closed,Fine Imposed,1
+Company,6369707,Business,Multiple Fake Accounts,Pending,Assets Seized,2
+Company,68582150,Real Estate,Offshore Accounts,Convicted,Fine Imposed,0
+Individual,3745961,Investments,Offshore Accounts,Ongoing,None,3
+Individual,78961293,Salary,Offshore Accounts,Convicted,Jail Sentence,3
+Company,94816206,Business,Offshore Accounts,Pending,Jail Sentence,0
+Company,36446424,Consultancy,Offshore Accounts,Ongoing,None,0
+Company,4344539,Others,Multiple Fake Accounts,Pending,Fine Imposed,0
+Company,11659076,Real Estate,Large Cash Transactions,Pending,Assets Seized,1
+Company,73254793,Salary,Shell Companies,Closed,Assets Seized,1
+Company,38548937,Salary,Offshore Accounts,Ongoing,None,1
+Company,853328,Investments,Large Cash Transactions,Closed,Assets Seized,4
+Company,20890174,Investments,Large Cash Transactions,Ongoing,Fine Imposed,3
+Individual,1093233,Consultancy,Shell Companies,Pending,Fine Imposed,3
+Company,90404783,Others,Multiple Fake Accounts,Pending,None,2
+Individual,77259213,Consultancy,Unreported Income,Convicted,Fine Imposed,1
+Company,579525,Business,Unreported Income,Ongoing,Jail Sentence,4
+Company,17003831,Business,Large Cash Transactions,Closed,None,4
+Individual,57046736,Consultancy,High-value Property Deals,Convicted,Fine Imposed,3
+Company,74633311,Others,High-value Property Deals,Convicted,None,1
+Individual,71759884,Consultancy,Shell Companies,Convicted,Assets Seized,2
+Company,82285366,Others,Unreported Income,Closed,Fine Imposed,1
+Company,3749391,Others,Large Cash Transactions,Convicted,Jail Sentence,0
+Individual,99281166,Real Estate,Multiple Fake Accounts,Closed,Fine Imposed,1
+Company,77233765,Others,Unreported Income,Convicted,None,0
+Individual,48537260,Investments,Large Cash Transactions,Closed,None,0
+Company,57388102,Others,Large Cash Transactions,Pending,Fine Imposed,2
+Individual,70771474,Others,Offshore Accounts,Pending,Jail Sentence,3
+Individual,15242217,Others,Multiple Fake Accounts,Pending,Jail Sentence,1
+Company,52546015,Business,Offshore Accounts,Pending,Jail Sentence,0
+Company,10342658,Investments,Shell Companies,Pending,None,1
+Individual,33748788,Investments,Offshore Accounts,Convicted,Fine Imposed,3
+Company,61869576,Consultancy,Offshore Accounts,Convicted,Assets Seized,3
+Company,95925021,Real Estate,Unreported Income,Convicted,None,4
+Company,63412116,Others,High-value Property Deals,Closed,Jail Sentence,3
+Individual,1798014,Salary,Large Cash Transactions,Closed,Fine Imposed,2
+Individual,40761152,Real Estate,Multiple Fake Accounts,Closed,Jail Sentence,0
+Individual,50346557,Real Estate,Offshore Accounts,Closed,Assets Seized,4
+Individual,46266125,Investments,Multiple Fake Accounts,Pending,Jail Sentence,2
+Individual,69447491,Real Estate,High-value Property Deals,Pending,Jail Sentence,1
+Individual,81999124,Others,High-value Property Deals,Pending,Assets Seized,0
+Individual,23345179,Others,Offshore Accounts,Ongoing,Fine Imposed,3
+Individual,73756383,Business,Shell Companies,Convicted,None,0
+Individual,17591337,Others,Offshore Accounts,Closed,Fine Imposed,1
+Company,57449769,Others,Unreported Income,Closed,Assets Seized,4
+Individual,98258175,Investments,Large Cash Transactions,Pending,Jail Sentence,4
+Company,20329846,Others,Shell Companies,Closed,Fine Imposed,4
+Company,11020723,Business,Offshore Accounts,Closed,None,3
+Company,72857712,Salary,Multiple Fake Accounts,Convicted,Assets Seized,2
+Individual,72243785,Investments,Shell Companies,Pending,Fine Imposed,2
+Individual,94969177,Salary,Shell Companies,Convicted,None,0
+Individual,50068037,Investments,Offshore Accounts,Ongoing,Assets Seized,3
+Individual,43401876,Consultancy,Shell Companies,Ongoing,None,4
+Company,50216883,Real Estate,Multiple Fake Accounts,Ongoing,Assets Seized,4
+Individual,60411505,Consultancy,High-value Property Deals,Pending,Jail Sentence,1
+Individual,46837763,Others,Shell Companies,Closed,Fine Imposed,1
+Individual,65782489,Salary,High-value Property Deals,Pending,None,4
+Individual,3743305,Others,Multiple Fake Accounts,Pending,Assets Seized,4
+Individual,13520137,Real Estate,Offshore Accounts,Closed,None,3
+Company,4516271,Investments,Large Cash Transactions,Convicted,None,2
+Individual,54767184,Real Estate,Shell Companies,Ongoing,Fine Imposed,1
+Company,34957127,Business,Large Cash Transactions,Convicted,Jail Sentence,2
+Individual,10545300,Real Estate,Multiple Fake Accounts,Ongoing,None,3
+Company,28759379,Business,Shell Companies,Pending,Assets Seized,4
+Individual,94973791,Real Estate,High-value Property Deals,Ongoing,Assets Seized,2
+Individual,34704999,Business,Unreported Income,Pending,Jail Sentence,4
+Company,27501727,Salary,Large Cash Transactions,Convicted,Assets Seized,4
+Company,74865222,Others,Shell Companies,Pending,Jail Sentence,0
+Company,29047889,Others,Large Cash Transactions,Convicted,Assets Seized,2
+Individual,49028079,Consultancy,Shell Companies,Closed,Fine Imposed,2
+Company,11776298,Others,Offshore Accounts,Closed,None,4
+Individual,84657827,Investments,High-value Property Deals,Closed,Fine Imposed,3
+Individual,55773671,Real Estate,Large Cash Transactions,Pending,None,0
+Company,89893595,Consultancy,Unreported Income,Closed,None,4
+Company,56614401,Investments,Unreported Income,Ongoing,None,1
+Individual,46723570,Investments,Multiple Fake Accounts,Convicted,Fine Imposed,1
+Individual,78597323,Business,Shell Companies,Convicted,None,0
+Company,15083888,Others,Large Cash Transactions,Ongoing,Fine Imposed,3
+Company,89182960,Salary,Multiple Fake Accounts,Pending,Jail Sentence,4
+Company,61754882,Salary,Large Cash Transactions,Pending,Assets Seized,2
+Individual,35008762,Consultancy,Shell Companies,Convicted,Assets Seized,0
+Individual,17078708,Salary,Unreported Income,Closed,None,3
+Individual,4085851,Real Estate,Offshore Accounts,Pending,Fine Imposed,2
+Individual,47735442,Salary,Unreported Income,Pending,Assets Seized,1
+Individual,34095504,Consultancy,Multiple Fake Accounts,Ongoing,Fine Imposed,1
+Individual,82446202,Salary,High-value Property Deals,Ongoing,Fine Imposed,2
+Company,35660155,Real Estate,Offshore Accounts,Closed,None,0
+Individual,29519068,Business,Multiple Fake Accounts,Pending,Assets Seized,1
+Individual,30235054,Consultancy,Shell Companies,Pending,None,4
+Individual,9752701,Business,Offshore Accounts,Ongoing,None,2
+Company,78312145,Business,Multiple Fake Accounts,Pending,Assets Seized,2
+Individual,33177676,Business,Shell Companies,Convicted,Assets Seized,1
+Individual,3026242,Investments,Unreported Income,Ongoing,Jail Sentence,0
+Company,37367456,Others,High-value Property Deals,Closed,Jail Sentence,4
+Individual,27862615,Investments,Shell Companies,Ongoing,Fine Imposed,0
+Individual,44703148,Others,Large Cash Transactions,Pending,Assets Seized,3
+Individual,4883177,Business,Shell Companies,Closed,Jail Sentence,3
+Individual,8504561,Consultancy,Shell Companies,Ongoing,Fine Imposed,1
+Individual,45982658,Others,High-value Property Deals,Convicted,Fine Imposed,1
+Company,2647480,Real Estate,Large Cash Transactions,Convicted,Fine Imposed,1
+Company,23201417,Real Estate,Multiple Fake Accounts,Ongoing,Jail Sentence,3
+Company,39723332,Salary,Multiple Fake Accounts,Convicted,Assets Seized,0
+Individual,19749313,Others,Shell Companies,Convicted,None,0
+Individual,16984380,Consultancy,Large Cash Transactions,Convicted,Fine Imposed,1
+Individual,10667244,Investments,Large Cash Transactions,Closed,Jail Sentence,4
+Company,34136263,Business,High-value Property Deals,Convicted,Jail Sentence,0
+Individual,70148339,Salary,Unreported Income,Convicted,None,3
+Individual,50284072,Real Estate,Multiple Fake Accounts,Convicted,None,2
+Company,95531108,Investments,High-value Property Deals,Closed,Jail Sentence,2
+Individual,3419720,Investments,Offshore Accounts,Ongoing,Assets Seized,2
+Company,71869939,Business,Multiple Fake Accounts,Pending,None,4
+Company,91058393,Others,High-value Property Deals,Convicted,Jail Sentence,1
+Company,74013364,Real Estate,Multiple Fake Accounts,Ongoing,None,3
+Individual,2690328,Consultancy,Unreported Income,Convicted,Assets Seized,4
+Individual,25906919,Investments,Offshore Accounts,Closed,Fine Imposed,3
+Individual,57708082,Business,Unreported Income,Ongoing,None,3
+Individual,93487616,Consultancy,Offshore Accounts,Closed,Assets Seized,1
+Individual,55445426,Others,Shell Companies,Convicted,Jail Sentence,2
+Individual,27398975,Real Estate,High-value Property Deals,Convicted,None,1
+Individual,11602291,Others,Offshore Accounts,Closed,None,4
+Company,120640,Investments,Unreported Income,Pending,Jail Sentence,4
+Individual,77548463,Consultancy,Multiple Fake Accounts,Closed,Fine Imposed,4
+Company,63026036,Consultancy,Offshore Accounts,Convicted,Jail Sentence,1
+Individual,85291611,Consultancy,High-value Property Deals,Closed,None,3
+Individual,97734848,Investments,Offshore Accounts,Pending,Jail Sentence,3
+Individual,3791196,Investments,Large Cash Transactions,Closed,Assets Seized,0
+Company,90926182,Others,Multiple Fake Accounts,Pending,Jail Sentence,4
+Company,19561512,Salary,High-value Property Deals,Pending,None,3
+Company,83742386,Others,High-value Property Deals,Closed,Jail Sentence,0
+Company,40310456,Real Estate,Shell Companies,Closed,Fine Imposed,3
+Individual,11770477,Business,Unreported Income,Ongoing,Jail Sentence,4
+Company,13267648,Consultancy,Shell Companies,Convicted,Fine Imposed,2
+Individual,22608781,Salary,High-value Property Deals,Pending,Assets Seized,4
+Individual,59996863,Business,Multiple Fake Accounts,Ongoing,Fine Imposed,1
+Company,62834216,Salary,Offshore Accounts,Closed,Jail Sentence,3
+Company,32475301,Others,Offshore Accounts,Convicted,None,3
+Company,70423772,Investments,Multiple Fake Accounts,Ongoing,Fine Imposed,1
+Company,88196618,Consultancy,High-value Property Deals,Pending,Assets Seized,1
+Company,26828642,Others,Offshore Accounts,Ongoing,Fine Imposed,2
+Company,61045760,Business,Offshore Accounts,Pending,Fine Imposed,3
+Company,95549875,Business,Offshore Accounts,Closed,Fine Imposed,3
+Company,46597339,Business,Unreported Income,Convicted,Assets Seized,2
+Individual,90422540,Business,Unreported Income,Convicted,Jail Sentence,0
+Company,14623458,Business,Large Cash Transactions,Convicted,Fine Imposed,2
+Company,47961176,Salary,Shell Companies,Closed,Fine Imposed,4
+Individual,29314326,Others,Multiple Fake Accounts,Pending,None,3
+Company,82946667,Consultancy,Multiple Fake Accounts,Closed,Assets Seized,1
+Individual,54003229,Investments,Multiple Fake Accounts,Convicted,Fine Imposed,4
+Individual,88182318,Investments,Large Cash Transactions,Closed,Assets Seized,3
+Company,56344783,Others,Unreported Income,Closed,Fine Imposed,2
+Individual,59195779,Others,High-value Property Deals,Closed,Jail Sentence,4
+Individual,47027874,Investments,High-value Property Deals,Pending,Jail Sentence,3
+Individual,29415614,Investments,Large Cash Transactions,Ongoing,Fine Imposed,0
+Individual,89318367,Salary,High-value Property Deals,Ongoing,Jail Sentence,0
+Company,47060676,Real Estate,Multiple Fake Accounts,Closed,Fine Imposed,1
+Individual,51421106,Consultancy,Shell Companies,Ongoing,Jail Sentence,3
+Company,37377243,Business,Offshore Accounts,Ongoing,None,0
+Individual,69476200,Real Estate,Unreported Income,Closed,None,2
+Individual,96485123,Others,Unreported Income,Closed,None,3
+Individual,69922506,Investments,Large Cash Transactions,Convicted,Assets Seized,2
+Individual,10248499,Real Estate,Unreported Income,Ongoing,Assets Seized,2
+Company,37392772,Consultancy,Multiple Fake Accounts,Pending,None,0
+Company,44412902,Others,High-value Property Deals,Closed,Assets Seized,3
+Individual,247775,Business,Multiple Fake Accounts,Convicted,Jail Sentence,4
+Individual,35990920,Business,Large Cash Transactions,Pending,Fine Imposed,0
+Company,84723574,Consultancy,Multiple Fake Accounts,Ongoing,Fine Imposed,0
+Individual,23664649,Consultancy,High-value Property Deals,Convicted,Fine Imposed,3
+Individual,78557230,Investments,Shell Companies,Closed,None,3
+Individual,17360852,Business,Large Cash Transactions,Pending,Assets Seized,2
+Company,78585842,Others,Shell Companies,Closed,Jail Sentence,3
+Company,54614054,Real Estate,Offshore Accounts,Ongoing,Jail Sentence,2
+Company,63039020,Others,Shell Companies,Pending,None,0
+Individual,30823482,Salary,Offshore Accounts,Ongoing,Jail Sentence,1
+Individual,78783130,Salary,Offshore Accounts,Ongoing,Jail Sentence,4
+Company,77323675,Consultancy,Shell Companies,Convicted,Jail Sentence,0
+Company,2326360,Investments,Large Cash Transactions,Closed,Jail Sentence,3
+Company,49487769,Salary,High-value Property Deals,Pending,Assets Seized,4
+Company,99344096,Business,Multiple Fake Accounts,Ongoing,Jail Sentence,1
+Individual,31715404,Others,Multiple Fake Accounts,Ongoing,Fine Imposed,1
+Company,92850518,Others,High-value Property Deals,Pending,None,2
+Individual,85268477,Consultancy,Offshore Accounts,Ongoing,Assets Seized,4
+Company,57899484,Real Estate,Offshore Accounts,Convicted,Jail Sentence,2
+Individual,16484343,Consultancy,Large Cash Transactions,Convicted,Assets Seized,0
+Company,44129273,Real Estate,Unreported Income,Convicted,Jail Sentence,4
+Company,93042904,Consultancy,Shell Companies,Convicted,Fine Imposed,0
+Company,40251137,Consultancy,Offshore Accounts,Ongoing,None,2
+Company,72621674,Consultancy,Multiple Fake Accounts,Pending,Jail Sentence,4
+Individual,80547273,Real Estate,Large Cash Transactions,Pending,Jail Sentence,2
+Company,92842001,Real Estate,Shell Companies,Pending,Jail Sentence,4
+Individual,81004884,Consultancy,Large Cash Transactions,Pending,Jail Sentence,2
+Individual,57285484,Salary,Shell Companies,Closed,None,1
+Individual,95989748,Investments,Shell Companies,Pending,None,2
+Individual,62232821,Investments,High-value Property Deals,Closed,Fine Imposed,1
+Company,76885154,Investments,Offshore Accounts,Closed,None,2
+Individual,80818647,Real Estate,Large Cash Transactions,Convicted,Jail Sentence,4
+Individual,83323068,Real Estate,Large Cash Transactions,Closed,Fine Imposed,4
+Individual,23070885,Salary,High-value Property Deals,Ongoing,Fine Imposed,4
+Company,1336643,Investments,Multiple Fake Accounts,Closed,Fine Imposed,3
+Company,77081056,Investments,Multiple Fake Accounts,Convicted,Jail Sentence,0
+Company,41919822,Consultancy,Offshore Accounts,Closed,Assets Seized,4
+Company,6250646,Real Estate,Offshore Accounts,Ongoing,Jail Sentence,1
+Individual,74142760,Investments,Unreported Income,Ongoing,None,4
+Individual,14559187,Others,High-value Property Deals,Ongoing,None,3
+Company,27830899,Salary,Multiple Fake Accounts,Convicted,Jail Sentence,1
+Individual,5459861,Others,Shell Companies,Convicted,Jail Sentence,3
+Individual,88875083,Others,Large Cash Transactions,Pending,Fine Imposed,1
+Individual,90247406,Salary,Offshore Accounts,Convicted,Jail Sentence,2
+Company,55528034,Others,Large Cash Transactions,Ongoing,Fine Imposed,0
+Company,12881595,Investments,Large Cash Transactions,Ongoing,None,0
+Individual,75574262,Real Estate,Unreported Income,Convicted,Fine Imposed,3
+Company,77239210,Salary,Multiple Fake Accounts,Closed,Jail Sentence,0
+Company,498345,Consultancy,Offshore Accounts,Convicted,None,3
+Company,76296546,Others,Large Cash Transactions,Convicted,Assets Seized,3
+Company,74986358,Salary,Offshore Accounts,Ongoing,Fine Imposed,3

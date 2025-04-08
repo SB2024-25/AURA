@@ -1,0 +1,610 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #e2eafc);
+            font-family: 'Inter', sans-serif;
+            color: #2c2c2c;
+        }
+        .dashboard-container {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+        }
+        h2 {
+            font-weight: 700;
+            color: #333;
+        }
+        .tile-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 2rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem; /* Add margin for spacing between cards */
+        }
+        .tile-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+        .tile-img {
+            width: 100%;
+            height: 300px;
+            border-radius: 2rem 2rem 0 0;
+        }
+        .card-title {
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .insight-text {
+            font-size: 0.95rem;
+            color: #555;
+            padding: 0.75rem 1rem;
+            background-color: #f8f9fb;
+            border-radius: 1rem;
+            margin-top: 0.75rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: none; /* Initially hide the insight text */
+        }
+        .tile-card:hover .insight-text {
+            display: block; /* Show on hover */
+            opacity: 1;
+        }
+        .final-summary {
+            background-color: #ffffff;
+            border-radius: 2rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+        }
+        .dashboard-grid {
+            display: flex;
+            flex-direction: column; /* Arrange cards vertically */
+            gap: 2rem; /* Space between cards */
+        }
+        .toggle-buttons {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .toggle-buttons .btn {
+            margin: 0.25rem;
+            border-radius: 2rem;
+            padding: 0.5rem 1.25rem;
+            font-weight: 600;
+        }
+        .upload-another {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .upload-another a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+        .upload-another a:hover {
+            background: linear-gradient(135deg, #5563de, #653a91);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2 class="text-center mb-4">AURA DASHBOARD</h2>
+
+        <div class="toggle-buttons">
+            <button class="btn btn-outline -primary" onclick="filterCards('all')">All</button>
+            <button class="btn btn-outline-secondary" onclick="filterCards('correlation')">Correlation</button>
+            <button class="btn btn-outline-success" onclick="filterCards('distribution')">Distribution</button>
+            <button class="btn btn-outline-danger" onclick="filterCards('trend')">Trend</button>
+        </div>
+
+        <div class="dashboard-grid">
+            {% for chart_key, chart_title in [
+              ('heatmap', 'Heatmap'),
+              ('bar_chart', 'Bar Chart'),
+              ('pie_chart', 'Pie Chart'),
+              ('scatter_plot', 'Scatter Plot'),
+              ('bubble_chart', 'Bubble Chart'),
+              ('area_chart', 'Area Chart'),
+              ('line_chart', 'Line Chart'),
+              ('box_plot', 'Box Plot'),
+              ('radar_chart', 'Radar Chart')
+            ] %}
+            {% if conclusions[chart_key] %}
+            <div class="tile-card card {{ 'correlation' if 'heatmap' in chart_key or 'scatter' in chart_key else 'distribution' if 'bar' in chart_key or 'box' in chart_key else 'trend' }}">
+                <div id="chart-{{ chart_key }}" class="tile-img"></div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ chart_title }}</h5>
+                    <div class="insight-text">
+                        <ul>
+                            {% for point in conclusions[chart_key] %}
+                            <li>{{ point }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="final-summary">
+            <h4>Final Dataset Summary</h4>
+            <p>{{ final_conclusion }}</p>
+        </div>
+
+        <div class="upload-another">
+            <a href="{{ url_for('middle') }}">Upload Another Dataset</a>
+        </div>
+    </div>
+
+    <script id="chart-data" type="application/json">
+        {{ images | tojson | safe }}
+    </script>
+
+    <script>
+        function filterCards(type) {
+            const cards = document.querySelectorAll('.tile-card');
+            cards.forEach(card => {
+                if (type === 'all' || card.classList.contains(type)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        window.onload = function () {
+            const charts = JSON.parse(document.getElementById("chart-data").textContent);
+            Object.keys(charts).forEach(key => {
+                const fig = charts[key];
+                const containerId = `chart-${key}`;
+                const el = document.getElementById(containerId);
+                if (el) {
+                    // Check if fig.data and fig.layout are defined
+                    if (fig.data && fig.layout) {
+                        Plotly.newPlot(containerId, fig.data, fig.layout);
+                    } else {
+                        console.error(`No data or layout for ${key}`);
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #e2eafc);
+            font-family: 'Inter', sans-serif;
+            color: #2c2c2c;
+        }
+        .dashboard-container {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+        }
+        h2 {
+            font-weight: 700;
+            color: #333;
+        }
+        .tile-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 2rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem; /* Add margin for spacing between cards */
+        }
+        .tile-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+        .tile-img {
+            width: 100%;
+            height: 300px;
+            border-radius: 2rem 2rem 0 0;
+            background-size: cover; /* Ensure the image covers the area */
+            background-position: center; /* Center the image */
+        }
+        .card-title {
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .insight-text {
+            font-size: 0.95rem;
+            color: #555;
+            padding: 0.75rem 1rem;
+            background-color: #f8f9fb;
+            border-radius: 1rem;
+            margin-top: 0.75rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: none; /* Initially hide the insight text */
+        }
+        .tile-card:hover .insight-text {
+            display: block; /* Show on hover */
+            opacity: 1;
+        }
+        .final-summary {
+            background-color: #ffffff;
+            border-radius: 2rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+        }
+        .dashboard-grid {
+            display: flex;
+            flex-direction: column; /* Arrange cards vertically */
+            gap: 2rem; /* Space between cards */
+        }
+        .toggle-buttons {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .toggle-buttons .btn {
+            margin: 0.25rem;
+            border-radius: 2rem;
+            padding: 0.5rem 1.25rem;
+            font-weight: 600;
+        }
+        .upload-another {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .upload-another a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+        .upload-another a:hover {
+            background: linear-gradient(135deg, #5563de, #653a91);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2 class="text-center mb-4">AURA DASHBOARD</h2>
+
+        <div class="toggle-buttons">
+            <button class="btn btn-outline -primary" onclick="filterCards('all')">All</button>
+            <button class="btn btn-outline-secondary" onclick="filterCards('correlation')">Correlation</button>
+            <button class="btn btn-outline-success" onclick="filterCards('distribution')">Distribution</button>
+            <button class="btn btn-outline-danger" onclick="filterCards('trend')">Trend</button>
+        </div>
+
+        <div class="dashboard-grid">
+            {% for chart_key, chart_title in [
+              ('heatmap', 'Heatmap'),
+              ('bar_chart', 'Bar Chart'),
+              ('pie_chart', 'Pie Chart'),
+              ('scatter_plot', 'Scatter Plot'),
+              ('bubble _chart', 'Bubble Chart'),
+              ('area_chart', 'Area Chart'),
+              ('line_chart', 'Line Chart'),
+              ('box_plot', 'Box Plot'),
+              ('radar_chart', 'Radar Chart')
+            ] %}
+            {% if conclusions[chart_key] %}
+            <div class="tile-card card {{ 'correlation' if 'heatmap' in chart_key or 'scatter' in chart_key else 'distribution' if 'bar' in chart_key or 'box' in chart_key else 'trend' }}">
+                {% if chart_key == 'heatmap' %}
+                <img src="{{ url_for('send_image', filename='heatmap.png') }}" class="tile-img" alt="Heatmap">
+                {% else %}
+                <div id="chart-{{ chart_key }}" class="tile-img"></div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ chart_title }}</h5>
+                    <div class="insight-text">
+                        <ul>
+                            {% for point in conclusions[chart_key] %}
+                            <li>{{ point }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="final-summary">
+            <h4>Final Dataset Summary</h4>
+            <p>{{ final_conclusion }}</p>
+        </div>
+
+        <div class="upload-another">
+            <a href="{{ url_for('middle') }}">Upload Another Dataset</a>
+        </div>
+    </div>
+
+    <script id="chart-data" type="application/json">
+        {{ images | tojson | safe }}
+    </script>
+
+    <script>
+        function filterCards(type) {
+            const cards = document.querySelectorAll('.tile-card');
+            cards.forEach(card => {
+                if (type === 'all' || card.classList.contains(type)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        window.onload = function () {
+            const charts = JSON.parse(document.getElementById("chart-data").textContent);
+            Object.keys(charts).forEach(key => {
+                const fig = charts[key];
+                const containerId = `chart-${key}`;
+                const el = document.getElementById(containerId);
+                if (el) {
+                    // Check if fig.data and fig.layout are defined
+                    if (fig.data && fig.layout) {
+                        Plotly.newPlot(containerId, fig.data, fig.layout);
+                    } else {
+                        console.error(`No data or layout for ${key}`);
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #e2eafc);
+            font-family: 'Inter', sans-serif;
+            color: #2c2c2c;
+        }
+        .dashboard-container {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+        }
+        h2 {
+            font-weight: 700;
+            color: #333;
+        }
+        .tile-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 2rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        .tile-img {
+            width: 65%;
+            height: 300px;
+            border-radius: 2rem;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+        .tile-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card-title {
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .insight-text {
+            font-size: 0.95rem;
+            color: #555;
+            background-color: #f8f9fb;
+            border-radius: 1rem;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: none;
+        }
+        .tile-card:hover .insight-text {
+            display: block;
+            opacity: 1;
+        }
+        .final-summary {
+            background-color: #ffffff;
+            border-radius: 2rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+        }
+        .dashboard-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .toggle-buttons {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .toggle-buttons .btn {
+            margin: 0.25rem;
+            border-radius: 2rem;
+            padding: 0.5rem 1.25rem;
+            font-weight: 600;
+        }
+        .upload-another {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .upload-another a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+        .upload-another a:hover {
+            background: linear-gradient(135deg, #5563de, #653a91);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .tile-card {
+                flex-direction: column;
+            }
+            .tile-img {
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2 class="text-center mb-4">AURA DASHBOARD</h2>
+
+        <div class="toggle-buttons">
+            <button class="btn btn-outline-primary" onclick="filterCards('all')">All</button>
+            <button class="btn btn-outline-secondary" onclick="filterCards('correlation')">Correlation</button>
+            <button class="btn btn-outline-success" onclick="filterCards('distribution')">Distribution</button>
+            <button class="btn btn-outline-danger" onclick="filterCards('trend')">Trend</button>
+        </div>
+
+        <div class="dashboard-grid">
+            {% for chart_key, chart_title in [
+              ('heatmap', 'Heatmap'),
+              ('bar_chart', 'Bar Chart'),
+              ('pie_chart', 'Pie Chart'),
+              ('scatter_plot', 'Scatter Plot'),
+              ('bubble_chart', 'Bubble Chart'),
+              ('area_chart', 'Area Chart'),
+              ('line_chart', 'Line Chart'),
+              ('box_plot', 'Box Plot'),
+              ('radar_chart', 'Radar Chart')
+            ] %}
+            {% if conclusions[chart_key] %}
+            <div class="tile-card card {{ 'correlation' if 'heatmap' in chart_key or 'scatter' in chart_key else 'distribution' if 'bar' in chart_key or 'box' in chart_key else 'trend' }}">
+                {% if chart_key == 'heatmap' %}
+                <img src="{{ url_for('send_image', filename='heatmap.png') }}" class="tile-img" alt="Heatmap">
+                {% else %}
+                <div id="chart-{{ chart_key }}" class="tile-img"></div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ chart_title }}</h5>
+                    <div class="insight-text">
+                        <ul>
+                            {% for point in conclusions[chart_key] %}
+                            <li>{{ point }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="final-summary">
+            <h4>Final Dataset Summary</h4>
+            <p>{{ final_conclusion }}</p>
+        </div>
+
+        <div class="upload-another">
+            <a href="{{ url_for('middle') }}">Upload Another Dataset</a>
+        </div>
+    </div>
+
+    <script id="chart-data" type="application/json">
+        {{ images | tojson | safe }}
+    </script>
+
+    <script>
+        function filterCards(type) {
+            const cards = document.querySelectorAll('.tile-card');
+            cards.forEach(card => {
+                if (type === 'all' || card.classList.contains(type)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        window.onload = function () {
+            const charts = JSON.parse(document.getElementById("chart-data").textContent);
+            Object.keys(charts).forEach(key => {
+                const fig = charts[key];
+                const containerId = `chart-${key}`;
+                const el = document.getElementById(containerId);
+                if (el && fig.data && fig.layout) {
+                    Plotly.newPlot(containerId, fig.data, fig.layout);
+                }
+            });
+        };
+    </script>
+</body>
+</html>

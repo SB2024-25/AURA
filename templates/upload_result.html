@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .container { max-width: 600px; margin: auto; }
+        a { 
+            display: block; 
+            margin: 10px; 
+            padding: 10px; 
+            background: #007bff; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+        }
+        a:hover { background: #0056b3; }
+        .success { color: #008000; } /* ✅ Green */
+        .error { color: #FF0000; }   /* ✅ Red */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ✅ Corrected: Use Flask templating to dynamically add a CSS class -->
+        <h1 class="{{ 'error' if error else 'success' }}">
+            {{ message }}
+        </h1>
+
+        {% if not error %}
+        <h3>Numeric Columns:</h3>
+        <p>{{ numeric_cols }}</p>
+
+        <h3>Categorical Columns:</h3>
+        <p>{{ categorical_cols }}</p>
+        {% endif %}
+
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

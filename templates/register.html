@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aura | Register</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #e2eafc);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .register-container {
+      background: rgba(255, 255, 255, 0.55);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 2rem;
+      padding: 3rem 2rem;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .register-container h2 {
+      text-align: center;
+      color: #333;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .form-control {
+      border-radius: 1rem;
+      background-color: #f0f2f5;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn-primary {
+      width: 100%;
+      border-radius: 2rem;
+      font-weight: 600;
+      padding: 0.75rem;
+      background-color: #4a90e2;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #3a78c2;
+    }
+
+    .text-center a {
+      color: #4a90e2;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .text-center a:hover {
+      color: #366fb2;
+    }
+
+    @media (max-width: 480px) {
+      .register-container {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Create an Account</h2>
+    <form action="login.html" method="get">
+      <input type="text" class="form-control" placeholder="Full Name" required />
+      <input type="email" class="form-control" placeholder="Email Address" required />
+      <input type="password" class="form-control" placeholder="Password" required />
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <div class="text-center mt-3">
+      <form action="login.html">Already have an account? <strong>Login</strong>
+      </form> 
+    </div>
+  </div>
+</body>
+</html>

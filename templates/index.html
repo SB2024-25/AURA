@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aura | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e8f0ff, #ffffff);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(14px);
+      border-radius: 2rem;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #4a90e2;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.85rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 1rem;
+      background-color: #f1f5f9;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.85rem;
+      margin-top: 0.5rem;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3b78bd;
+    }
+
+    .bottom-links {
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .bottom-links a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    .bottom-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-card">
+    <h2>Welcome Back</h2>
+    <form action="{{ url_for('middle') }}" method="get">
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <div class="bottom-links">
+      <a href="{{ url_for('register') }}">Don't have an account? Register</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+header {
+    background: #004aad;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.upload-section {
+    margin-top: 20px;
+    background: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.upload-section h2 {
+    margin-bottom: 10px;
+}
+
+.upload-section input, .upload-section button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.upload-section button {
+    background: #004aad;
+    color: white;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stat-card {
+    flex: 1;
+    background: #fff;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+.final-conclusion {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+.final-conclusion h4 {
+    color: #004aad;
+    text-align: center;
+    font-weight: bold;
+}
